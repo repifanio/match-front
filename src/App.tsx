@@ -150,7 +150,7 @@ export default function App() {
                     : 'bg-gradient-to-r from-blue-600 to-violet-600 text-white hover:scale-[1.02] active:scale-[0.98] shadow-blue-100'
                   }`}
               >
-                {loading ? 'Consultando IA...' : 'Gerar Relatório'}
+                {loading ? 'Consultando IA...' : 'Realizar Análise'}
               </button>
 
               <div className="mt-8 pt-8 border-t border-indigo-50/50">
