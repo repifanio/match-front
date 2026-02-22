@@ -165,9 +165,9 @@ export default function App() {
                     </div>
                   </div>
                   <p className="text-[11px] text-slate-500 leading-relaxed mb-4">
-                    Tem alguma dúvida técnica ou sugestão de melhoria? Nossa equipe de análise está pronta para ouvir você.
+                    Tem alguma dúvida técnica ou sugestão de melhoria? Mande para nós 'ouvirmos' você.
                   </p>
-                  <a href="mailto:suporte@matchpro.ai" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white border border-slate-200 hover:border-indigo-200 hover:bg-indigo-50 text-slate-600 hover:text-indigo-600 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all shadow-sm">
+                  <a href="mailto:rafael.cepifanio@gmail.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white border border-slate-200 hover:border-indigo-200 hover:bg-indigo-50 text-slate-600 hover:text-indigo-600 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all shadow-sm">
                     Enviar E-mail
                   </a>
                 </div>
