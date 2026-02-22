@@ -207,11 +207,11 @@ export default function App() {
                       <Target className="w-16 h-16 text-blue-500/40" />
                     </div>
 
-                    <h3 className="text-2xl font-black text-slate-800 tracking-tight">
-                      Sua próxima grande oportunidade começa aqui.
+                    <h3 className="text-2xl font-black text-slate-800 tracking-tight leading-tight">
+                      Descubra agora o seu <span className="text-blue-600 italic">real potencial</span> de match.
                     </h3>
-                    <p className="text-slate-400 text-base mt-2 font-medium max-w-sm">
-                      Nossa IA de elite vai além do texto: ela lê sua trajetória e projeta seu potencial para o recrutador.
+                    <p className="text-slate-400 text-base mt-4 font-medium max-w-md leading-relaxed">
+                      Cruze seu perfil com os requisitos da vaga e entenda exatamente o que falta para você ser o candidato ideal — ou como destacar o que você já tem.
                     </p>
 
                     {/* Grid de Benefícios Antecipados */}
