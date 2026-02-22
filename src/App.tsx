@@ -9,7 +9,8 @@ import {
   Zap,
   Copy,
   Check,
-  Cpu
+  Cpu,
+  Lightbulb
 } from 'lucide-react';
 
 const api = axios.create({ baseURL: 'https://match-production-3540.up.railway.app/analysis' });
@@ -71,7 +72,7 @@ export default function App() {
             <span className="font-black text-xl tracking-tighter text-slate-800 flex items-center gap-1">
               MATCH <span className="text-blue-600 italic uppercase">Pro</span>
             </span>
-            <span className="text-[10px] font-bold text-slate-400 tracking-[0.3em] uppercase">AI Analytics</span>
+            <span className="text-[10px] font-bold text-slate-400 tracking-[0.3em] uppercase">Análise Profissional</span>
           </div>
         </div>
       </nav>
@@ -79,10 +80,10 @@ export default function App() {
       <main className="max-w-[1400px] mx-auto p-10">
         <header className="mb-12">
           <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
-            Análise de <span className="text-blue-600">Match</span> Estratégico
+            Análise de <span className="text-blue-600">Match</span> Profissional e Estratégico
           </h1>
           <p className="text-slate-500 text-lg mt-2 max-w-2xl font-medium">
-            Otimize sua abordagem profissional com a melhor inteligência de mercado.
+            Entenda como o seu perfil está adequado em relação à vaga desejada e receba insights personalizados para potencializar sua carreira.
           </p>
         </header>
 
@@ -92,10 +93,33 @@ export default function App() {
             <div className="bg-white border border-indigo-50 rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
               <div className="space-y-4 mb-8">
                 <label className="text-xs font-bold text-slate-700 ml-1">Currículo (PDF)</label>
-                <div className="relative group border-2 border-dashed border-indigo-100 rounded-2xl p-10 hover:border-violet-400 hover:bg-violet-50/30 transition-all cursor-pointer text-center">
-                  <input type="file" accept="application/pdf" onChange={handleUpload} className="absolute inset-0 opacity-0 cursor-pointer" />
-                  <Upload className="w-6 h-6 text-indigo-400 mx-auto mb-4 group-hover:text-violet-600 transition-colors" />
-                  <p className="text-sm font-bold text-slate-800 tracking-tight">{file ? file.name : 'Selecione seu currículo'}</p>
+                <div className="space-y-4 mb-8">
+                  <div className="relative group border-2 border-dashed border-indigo-100 rounded-2xl p-10 hover:border-violet-400 hover:bg-violet-50/30 transition-all cursor-pointer text-center">
+                    <input
+                      type="file"
+                      accept="application/pdf"
+                      onChange={handleUpload}
+                      className="absolute inset-0 opacity-0 cursor-pointer"
+                    />
+                    <Upload className="w-6 h-6 text-indigo-400 mx-auto mb-4 group-hover:text-violet-600 transition-colors" />
+                    <p className="text-sm font-bold text-slate-800 tracking-tight">
+                      {file ? file.name : 'Selecione seu currículo'}
+                    </p>
+                  </div>
+
+                  {/* MENSAGEM DE DICA - ADICIONADA AQUI */}
+                  <div className="flex gap-3 p-4 bg-amber-50/50 rounded-2xl border border-amber-100/50">
+                    <Lightbulb className="w-5 h-5 text-amber-500 shrink-0" />
+                    <p className="text-[11px] text-amber-700 leading-relaxed">
+                      <strong>Dica:</strong> Para um resultado superior, utilize o PDF gerado pelo LinkedIn (Acesse seu perfil: <em>Mais &gt; Salvar como PDF</em>).
+                    </p>
+                  </div>
+
+                  {profileText && (
+                    <div className="flex items-center gap-2 justify-center py-2 bg-emerald-50 text-emerald-600 rounded-full text-[10px] font-black uppercase tracking-widest animate-in zoom-in">
+                      <Check className="w-3 h-3" /> Texto Extraído com Sucesso
+                    </div>
+                  )}
                 </div>
                 {profileText && (
                   <div className="flex items-center gap-2 justify-center py-2 bg-emerald-50 text-emerald-600 rounded-full text-[10px] font-black uppercase tracking-widest animate-in zoom-in">
