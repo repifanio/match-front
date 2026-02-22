@@ -65,8 +65,8 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFDFF] text-slate-900 font-sans antialiased">
-      <nav className="flex items-center px-8 py-5 bg-white/80 backdrop-blur-md border-b border-indigo-50 shadow-sm sticky top-0 z-50">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#FDFDFF] text-slate-900 font-sans antialiased flex flex-col">
+      <nav className="w-full flex items-center px-4 md:px-8 py-5 bg-white/80 backdrop-blur-md border-b border-indigo-50 shadow-sm sticky top-0 z-50">
         <div className="flex items-center gap-3">
           <div className="relative bg-slate-900 p-2 rounded-xl shadow-xl border border-white/10">
             <Cpu className="text-white w-5 h-5 animate-pulse" />
@@ -95,31 +95,31 @@ export default function App() {
         </div>
       )}
 
-      <main className="max-w-[1400px] mx-auto p-10">
+      <main className="flex-1 w-full max-w-[1400px] mx-auto p-6 md:p-10">
         <header className="mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
             Análise de <span className="text-blue-600">Match</span> Profissional e Estratégico
           </h1>
-          <p className="text-slate-500 text-lg mt-2 max-w-2xl font-medium">
+          <p className="text-slate-500 text-base md:text-lg mt-2 max-w-2xl font-medium">
             Entenda como o seu perfil está adequado em relação à vaga desejada e receba insights personalizados para potencializar sua carreira.
           </p>
         </header>
 
-        <div className="grid grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-12 gap-6 lg:gap-10 items-start">
           <div className="col-span-12 lg:col-span-4 space-y-8">
-            <div className="bg-white border border-indigo-50 rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+            <div className="bg-white border border-indigo-50 rounded-3xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
               <div className="space-y-4 mb-8">
                 <label className="text-xs font-bold text-slate-700 ml-1 uppercase tracking-wider">Currículo (PDF)</label>
-                <div className="relative group border-2 border-dashed border-indigo-100 rounded-2xl p-10 hover:border-violet-400 hover:bg-violet-50/30 transition-all cursor-pointer text-center">
+                <div className="relative group border-2 border-dashed border-indigo-100 rounded-2xl p-6 md:p-10 hover:border-violet-400 hover:bg-violet-50/30 transition-all cursor-pointer text-center">
                   <input type="file" accept="application/pdf" onChange={handleUpload} className="absolute inset-0 opacity-0 cursor-pointer" />
                   <Upload className="w-6 h-6 text-indigo-400 mx-auto mb-4 group-hover:text-violet-600 transition-colors" />
-                  <p className="text-sm font-bold text-slate-800 tracking-tight">{file ? file.name : 'Selecione seu currículo'}</p>
+                  <p className="text-sm font-bold text-slate-800 tracking-tight break-all">{file ? file.name : 'Selecione seu currículo'}</p>
                 </div>
 
                 <div className="flex gap-3 p-4 bg-amber-50/50 rounded-2xl border border-amber-100/50">
                   <Lightbulb className="w-5 h-5 text-amber-500 shrink-0" />
                   <p className="text-[11px] text-amber-700 leading-relaxed">
-                    <strong>Dica:</strong> Para um resultado superior, utilize o PDF gerado pelo LinkedIn (Acesse seu perfil: <em>Mais &gt; Salvar como PDF</em>).
+                    <strong>Dica:</strong> Para um resultado superior, utilize o PDF gerado pelo LinkedIn (Acesse seu perfil: <em>Mais e Salvar como PDF</em>).
                   </p>
                 </div>
 
@@ -156,12 +156,12 @@ export default function App() {
               <div className="mt-8 pt-8 border-t border-indigo-50/50">
                 <div className="bg-slate-50/50 rounded-2xl p-5 border border-slate-100/50">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center shadow-lg">
-                      <Cpu className="text-white w-4 h-4" />
+                    <div className="w-10 h-10 shrink-0">
+                      <img src="/logo.svg" alt="Match Pro Lab" className="w-full h-full object-contain" />
                     </div>
                     <div className="flex flex-col">
                       <span className="text-[11px] font-black text-slate-800 uppercase tracking-tighter">Match Pro Lab</span>
-                      <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Suporte & Feedback</span>
+                      <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Conexão & Feedback</span>
                     </div>
                   </div>
                   <p className="text-[11px] text-slate-500 leading-relaxed mb-4">
@@ -172,14 +172,14 @@ export default function App() {
                   </a>
                 </div>
                 <p className="text-[9px] text-center text-slate-300 mt-4 font-medium uppercase tracking-[0.2em]">
-                  © 2026 Match Pro AI • v1.0.4
+                   Match Pro por Rafael Epifanio • © 2026
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="col-span-12 lg:col-span-8 bg-white border border-indigo-50 rounded-[2.5rem] min-h-[750px] flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.03)] overflow-hidden relative">
-            <div className="p-8 border-b border-indigo-50 bg-gradient-to-r from-slate-50/50 to-white flex justify-between items-center">
+          <div className="col-span-12 lg:col-span-8 bg-white border border-indigo-50 rounded-[2.5rem] min-h-[500px] lg:min-h-[750px] flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.03)] overflow-hidden relative">
+            <div className="p-6 md:p-8 border-b border-indigo-50 bg-gradient-to-r from-slate-50/50 to-white flex justify-between items-center">
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.6)]"></div>
                 <span className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Análise do Match</span>
@@ -191,7 +191,7 @@ export default function App() {
                     setCopied(true);
                     setTimeout(() => setCopied(false), 2000);
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-white border border-indigo-100 rounded-xl text-xs font-bold text-indigo-600 shadow-sm active:scale-95 transition-all hover:bg-indigo-50"
+                  className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 bg-white border border-indigo-100 rounded-xl text-[10px] md:text-xs font-bold text-indigo-600 shadow-sm active:scale-95 transition-all hover:bg-indigo-50"
                 >
                   {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
                   {copied ? 'Copiado!' : 'Copiar Análise'}
@@ -199,10 +199,10 @@ export default function App() {
               )}
             </div>
 
-            <div className="flex-1 p-12 overflow-y-auto">
+            <div className="flex-1 p-6 md:p-12 overflow-y-auto overflow-x-hidden">
               {!analysis ? (
                 <div className="h-full flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
-                  <div className="animate-in fade-in zoom-in duration-700 flex flex-col items-center">
+                  <div className="animate-in fade-in zoom-in duration-700 flex flex-col items-center w-full">
                     <div className="bg-slate-50 p-6 rounded-[2.5rem] mb-8 border border-slate-100 shadow-inner">
                       <Target className="w-16 h-16 text-blue-500/40" />
                     </div>
@@ -211,40 +211,33 @@ export default function App() {
                       Descubra agora o seu <span className="text-blue-600 italic">real potencial</span> de match.
                     </h3>
                     <p className="text-slate-400 text-base mt-4 font-medium max-w-md leading-relaxed">
-                      Cruze seu perfil com os requisitos da vaga e entenda exatamente o que falta para você ser o candidato ideal — ou como destacar o que você já tem.
+                      Cruze seu perfil com os requisitos da vaga e entenda exatamente o que falta para você ser o candidato ideal.
                     </p>
 
-                    {/* Grid de Benefícios Antecipados */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 w-full">
-                      <div className="bg-white p-6 rounded-3xl border border-indigo-50 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="bg-white p-6 rounded-3xl border border-indigo-50 shadow-sm">
                         <Cpu className="w-6 h-6 text-blue-600 mb-4 mx-auto" />
-                        <h4 className="text-xs font-black uppercase tracking-widest text-slate-800 mb-2">Dedução de Senioridade</h4>
-                        <p className="text-[10px] text-slate-500 leading-relaxed">Identificamos competências implícitas que seu CV atual omite.</p>
+                        <h4 className="text-xs font-black uppercase tracking-widest text-slate-800 mb-2">Senioridade</h4>
+                        <p className="text-[10px] text-slate-500">Dedução de competências implícitas no seu currículo.</p>
                       </div>
 
-                      <div className="bg-white p-6 rounded-3xl border border-indigo-50 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="bg-white p-6 rounded-3xl border border-indigo-50 shadow-sm">
                         <Zap className="w-6 h-6 text-amber-400 mb-4 mx-auto" />
-                        <h4 className="text-xs font-black uppercase tracking-widest text-slate-800 mb-2">Visão Além do PDF</h4>
-                        <p className="text-[10px] text-slate-500 leading-relaxed">Dicas estratégicas para otimizar seu LinkedIn para esta vaga.</p>
+                        <h4 className="text-xs font-black uppercase tracking-widest text-slate-800 mb-2">Visão Estratégica</h4>
+                        <p className="text-[10px] text-slate-500">O que o recrutador busca além das palavras-chave.</p>
                       </div>
 
-                      <div className="bg-white p-6 rounded-3xl border border-indigo-50 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="bg-white p-6 rounded-3xl border border-indigo-50 shadow-sm">
                         <Sparkles className="w-6 h-6 text-violet-600 mb-4 mx-auto" />
                         <h4 className="text-xs font-black uppercase tracking-widest text-slate-800 mb-2">Pitch de Elite</h4>
-                        <p className="text-[10px] text-slate-500 leading-relaxed">Um roteiro pronto para abordar o recrutador com autoridade.</p>
+                        <p className="text-[10px] text-slate-500">Roteiro para abordar a vaga com autoridade.</p>
                       </div>
-                    </div>
-
-                    <div className="mt-12 flex items-center gap-2 text-slate-300">
-                      <div className="h-[1px] w-8 bg-slate-100"></div>
-                      <span className="text-[10px] font-bold uppercase tracking-[0.3em]">Aguardando Inputs</span>
-                      <div className="h-[1px] w-8 bg-slate-100"></div>
                     </div>
                   </div>
                 </div>
               ) : (
-                <div className="animate-in fade-in slide-in-from-bottom-6 duration-700">
-                  <article className="prose prose-indigo max-w-none 
+                <div className="animate-in fade-in slide-in-from-bottom-6 duration-700 w-full">
+                  <article className="prose prose-indigo max-w-none break-words
                     prose-headings:text-indigo-900 prose-headings:font-bold 
                     prose-p:text-slate-600 prose-p:leading-relaxed
                     prose-strong:text-violet-600 prose-strong:font-bold
@@ -254,25 +247,25 @@ export default function App() {
                     </ReactMarkdown>
                   </article>
 
-                  <div className="mt-12 p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 text-center">
+                  <div className="mt-12 p-6 md:p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 text-center">
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-white rounded-2xl shadow-sm mb-6">
                       <Zap className="w-6 h-6 text-amber-400 fill-amber-400" />
                     </div>
 
-                    <h3 className="text-2xl font-black text-slate-800 tracking-tight">Acrescento em algo para você? Pague um ☕ para a IA.</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-slate-800 tracking-tight">Foi útil? Pague um ☕ para a IA.</h3>
                     <p className="text-slate-500 text-sm mt-2 max-w-sm mx-auto leading-relaxed font-medium">
-                      Sem assinaturas, sem anúncios. Apenas um propósito de auxiliar quem precisa. Se a análise foi útil, contribua com qualquer valor (qualquer mesmo!).
+                      Se a análise ajudou na sua preparação, contribua para manter o projeto online.
                     </p>
 
                     <div className="mt-10 flex flex-col items-center">
-                      <div className="bg-white p-6 rounded-[2rem] shadow-xl border border-indigo-50 mb-8">
+                      <div className="bg-white p-4 md:p-6 rounded-[2rem] shadow-xl border border-indigo-50 mb-8 w-full max-w-[320px] md:max-w-none">
                         <img
-                          src="https://lh3.googleusercontent.com/d/1i8_rjF4f6iKMCXdh_MO1W5PaFuu7FcNO"
-                          alt="QR Code PIX Rafael"
-                          className="w-72 h-72 md:w-80 md:h-80 object-contain mx-auto"
+                          src="https://matchprofessional.space/pix-qr.png"
+                          alt="QR Code PIX"
+                          className="w-full h-auto aspect-square object-contain mx-auto"
                         />
-                        <div className="mt-4 pt-4 border-t border-slate-50">
-                          <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
+                        <div className="mt-4 pt-4 border-t border-slate-50 px-2">
+                          <p className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.15em] leading-relaxed">
                             "Sorte é o que acontece quando a preparação encontra a oportunidade." — Sêneca
                           </p>
                         </div>
@@ -282,19 +275,14 @@ export default function App() {
                         onClick={() => {
                           navigator.clipboard.writeText(PIX_CODE);
                           setPixCopied(true);
-                          window.clarity?.("event", "pix_copy_click");
                           setTimeout(() => setPixCopied(false), 3000);
                         }}
-                        className={`flex items-center gap-3 px-10 py-5 rounded-2xl font-bold transition-all shadow-2xl active:scale-95 w-full max-w-xs justify-center ${pixCopied ? 'bg-emerald-500 text-white shadow-emerald-100' : 'bg-slate-900 text-white hover:bg-slate-800 shadow-slate-200'}`}
+                        className={`flex items-center gap-3 px-6 py-4 md:px-10 md:py-5 rounded-2xl font-bold transition-all shadow-2xl active:scale-95 w-full max-w-xs justify-center ${pixCopied ? 'bg-emerald-500 text-white shadow-emerald-100' : 'bg-slate-900 text-white hover:bg-slate-800 shadow-slate-200'}`}
                       >
                         {pixCopied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
-                        {pixCopied ? 'Código QR copiado!' : 'Retribuir com PIX'}
+                        {pixCopied ? 'Código copiado!' : 'Copiar PIX'}
                       </button>
                     </div>
-
-                    <p className="mt-10 text-[10px] font-bold text-slate-300 uppercase tracking-[0.3em]">
-                      Obrigado por manter esse projeto vivo
-                    </p>
                   </div>
                 </div>
               )}
