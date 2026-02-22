@@ -13,7 +13,7 @@ import {
   Lightbulb
 } from 'lucide-react';
 
-const api = axios.create({ baseURL: 'http://localhost:3000/analysis' });
+const api = axios.create({ baseURL: 'https://match-production-3540.up.railway.app/analysis' });
 
 declare global {
   interface Window {
