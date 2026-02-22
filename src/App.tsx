@@ -260,10 +260,14 @@ export default function App() {
                     <div className="mt-10 flex flex-col items-center">
                       <div className="bg-white p-4 md:p-6 rounded-[2rem] shadow-xl border border-indigo-50 mb-8 w-full max-w-[320px] md:max-w-none">
                         <img
-                          src="https://matchprofessional.space/pix-qr.png"
-                          alt="QR Code PIX"
-                          className="w-full h-auto aspect-square object-contain mx-auto"
-                        />
+
+src="https://lh3.googleusercontent.com/d/1i8_rjF4f6iKMCXdh_MO1W5PaFuu7FcNO"
+
+alt="QR Code PIX Rafael"
+
+className="w-72 h-72 md:w-80 md:h-80 object-contain mx-auto"
+
+/>
                         <div className="mt-4 pt-4 border-t border-slate-50 px-2">
                           <p className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.15em] leading-relaxed">
                             "Sorte é o que acontece quando a preparação encontra a oportunidade." — Sêneca
@@ -280,7 +284,7 @@ export default function App() {
                         className={`flex items-center gap-3 px-6 py-4 md:px-10 md:py-5 rounded-2xl font-bold transition-all shadow-2xl active:scale-95 w-full max-w-xs justify-center ${pixCopied ? 'bg-emerald-500 text-white shadow-emerald-100' : 'bg-slate-900 text-white hover:bg-slate-800 shadow-slate-200'}`}
                       >
                         {pixCopied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
-                        {pixCopied ? 'Código copiado!' : 'Copiar PIX'}
+                        {pixCopied ? 'Código copiado!' : 'Retribuir com PIX'}
                       </button>
                     </div>
                   </div>
