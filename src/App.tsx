@@ -201,10 +201,46 @@ export default function App() {
 
             <div className="flex-1 p-12 overflow-y-auto">
               {!analysis ? (
-                <div className="h-full flex flex-col items-center justify-center text-center max-w-md mx-auto opacity-60">
-                  <Target className="w-16 h-16 text-slate-200 mb-6" />
-                  <h3 className="text-xl font-bold text-slate-400">Pronto para começar</h3>
-                  <p className="text-slate-400 text-sm mt-2 font-medium">Insira os dados ao lado para receber sua mentoria via IA.</p>
+                <div className="h-full flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
+                  <div className="animate-in fade-in zoom-in duration-700 flex flex-col items-center">
+                    <div className="bg-slate-50 p-6 rounded-[2.5rem] mb-8 border border-slate-100 shadow-inner">
+                      <Target className="w-16 h-16 text-blue-500/40" />
+                    </div>
+
+                    <h3 className="text-2xl font-black text-slate-800 tracking-tight">
+                      Sua próxima grande oportunidade começa aqui.
+                    </h3>
+                    <p className="text-slate-400 text-base mt-2 font-medium max-w-sm">
+                      Nossa IA de elite vai além do texto: ela lê sua trajetória e projeta seu potencial para o recrutador.
+                    </p>
+
+                    {/* Grid de Benefícios Antecipados */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 w-full">
+                      <div className="bg-white p-6 rounded-3xl border border-indigo-50 shadow-sm hover:shadow-md transition-shadow">
+                        <Cpu className="w-6 h-6 text-blue-600 mb-4 mx-auto" />
+                        <h4 className="text-xs font-black uppercase tracking-widest text-slate-800 mb-2">Dedução de Senioridade</h4>
+                        <p className="text-[10px] text-slate-500 leading-relaxed">Identificamos competências implícitas que seu CV atual omite.</p>
+                      </div>
+
+                      <div className="bg-white p-6 rounded-3xl border border-indigo-50 shadow-sm hover:shadow-md transition-shadow">
+                        <Zap className="w-6 h-6 text-amber-400 mb-4 mx-auto" />
+                        <h4 className="text-xs font-black uppercase tracking-widest text-slate-800 mb-2">Visão Além do PDF</h4>
+                        <p className="text-[10px] text-slate-500 leading-relaxed">Dicas estratégicas para otimizar seu LinkedIn para esta vaga.</p>
+                      </div>
+
+                      <div className="bg-white p-6 rounded-3xl border border-indigo-50 shadow-sm hover:shadow-md transition-shadow">
+                        <Sparkles className="w-6 h-6 text-violet-600 mb-4 mx-auto" />
+                        <h4 className="text-xs font-black uppercase tracking-widest text-slate-800 mb-2">Pitch de Elite</h4>
+                        <p className="text-[10px] text-slate-500 leading-relaxed">Um roteiro pronto para abordar o recrutador com autoridade.</p>
+                      </div>
+                    </div>
+
+                    <div className="mt-12 flex items-center gap-2 text-slate-300">
+                      <div className="h-[1px] w-8 bg-slate-100"></div>
+                      <span className="text-[10px] font-bold uppercase tracking-[0.3em]">Aguardando Inputs</span>
+                      <div className="h-[1px] w-8 bg-slate-100"></div>
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <div className="animate-in fade-in slide-in-from-bottom-6 duration-700">
